@@ -1,9 +1,19 @@
 {
   "name": "unplugin-jsx-short-bind",
-  "version": "0.0.2",
   "type": "module",
+  "version": "0.0.2",
   "packageManager": "pnpm@8.12.0",
   "description": "JSX short bind.",
+  "author": "zhiyuanzmj",
+  "license": "MIT",
+  "homepage": "https://github.com/zhiyuanzmj/unplugin-jsx-short-bind#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhiyuanzmj/unplugin-jsx-short-bind.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhiyuanzmj/unplugin-jsx-short-bind/issues"
+  },
   "keywords": [
     "unplugin",
     "rollup",
@@ -11,53 +21,40 @@
     "esbuild",
     "webpack"
   ],
-  "license": "MIT",
-  "homepage": "https://github.com/zhiyuanzmj/unplugin-jsx-short-bind#readme",
-  "bugs": {
-    "url": "https://github.com/zhiyuanzmj/unplugin-jsx-short-bind/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhiyuanzmj/unplugin-jsx-short-bind.git"
-  },
-  "author": "zhiyuanzmj",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
     "./vite": {
-      "require": "./dist/vite.cjs",
-      "import": "./dist/vite.js"
+      "import": "./dist/vite.js",
+      "require": "./dist/vite.cjs"
     },
     "./webpack": {
-      "require": "./dist/webpack.cjs",
-      "import": "./dist/webpack.js"
+      "import": "./dist/webpack.js",
+      "require": "./dist/webpack.cjs"
     },
     "./rollup": {
-      "require": "./dist/rollup.cjs",
-      "import": "./dist/rollup.js"
+      "import": "./dist/rollup.js",
+      "require": "./dist/rollup.cjs"
     },
     "./esbuild": {
-      "require": "./dist/esbuild.cjs",
-      "import": "./dist/esbuild.js"
+      "import": "./dist/esbuild.js",
+      "require": "./dist/esbuild.cjs"
     },
     "./volar": {
-      "require": "./dist/volar.cjs",
-      "import": "./dist/volar.js"
+      "import": "./dist/volar.js",
+      "require": "./dist/volar.cjs"
     },
     "./eslint": {
-      "require": "./dist/eslint.cjs",
-      "import": "./dist/eslint.js"
+      "import": "./dist/eslint.js",
+      "require": "./dist/eslint.cjs"
     },
     "./*": "./*"
   },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
       "*": [
@@ -66,8 +63,14 @@
       ]
     }
   },
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": ">=16.14.0"
   },
   "scripts": {
     "dev": "tsup --watch src",
@@ -104,8 +107,5 @@
     "vite": "^5.0.10",
     "vitest": "^1.1.0",
     "vue": "^3.4.3"
-  },
-  "engines": {
-    "node": ">=16.14.0"
   }
 }

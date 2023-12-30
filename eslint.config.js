@@ -1,4 +1,5 @@
 import antfu from '@antfu/eslint-config'
+
 import jsxShortBind from 'unplugin-jsx-short-bind/eslint'
 
 export default antfu(

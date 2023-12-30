@@ -2,9 +2,9 @@
   "compilerOptions": {
     "target": "esnext",
     "jsx": "preserve",
+    "jsxImportSource": "vue",
     "lib": ["esnext"],
     "module": "esnext",
-    "jsxImportSource": "vue",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "types": ["node", "unplugin-vue-macros/macros-global"],
@@ -15,8 +15,8 @@
   },
   "include": ["src", "tests"],
   "vueCompilerOptions": {
-    "plugins": [ 
-      "@vue-macros/volar/export-render", 
+    "plugins": [
+      "@vue-macros/volar/export-render",
       "./dist/volar.cjs"
     ]
   }

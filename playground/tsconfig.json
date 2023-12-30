@@ -2,25 +2,25 @@
   "compilerOptions": {
     "target": "ESNext",
     "jsx": "preserve",
+    "jsxImportSource": "vue",
     "lib": ["ESNext", "DOM"],
     "useDefineForClassFields": true,
-    "jsxImportSource": "vue",
     "customConditions": ["dev"],
     "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
+    "types": ["unplugin-vue-macros/macros-global"],
     "allowJs": true,
     "strict": true,
     "noEmit": true,
     "sourceMap": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "skipLibCheck": true,
-    "types": ["unplugin-vue-macros/macros-global"]
+    "skipLibCheck": true
   },
   "vueCompilerOptions": {
     "plugins": [
-      "@vue-macros/volar/export-render", 
+      "@vue-macros/volar/export-render",
       "unplugin-jsx-short-bind/volar"
     ]
   }

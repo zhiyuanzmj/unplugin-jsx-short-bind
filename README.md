@@ -2,7 +2,7 @@
 
 [![Unit Test](https://github.com/zhiyuanzmj/unplugin-jsx-short-bind/actions/workflows/unit-test.yml/badge.svg)](https://github.com/zhiyuanzmj/unplugin-jsx-short-bind/actions/workflows/unit-test.yml)
 
-A shorthand for binding prop with the same data name for JSX.
+A shorthand for binding prop with the same data name for JSX. Powered by [ast-grep](https://github.com/ast-grep/ast-grep).
 
 ```vue
 <script setup lang="tsx">
@@ -94,36 +94,6 @@ module.exports = {
 ```
 
 <br></details>
-
-## Usage
-
-```ts
-// ~/store/user.ts
-export const useUserStore = defineStore$("user", () => {
-  let token = $ref("");
-  function login() {
-    token = "TOKEN";
-  }
-
-  return {
-    token,
-    login,
-  };
-});
-
-// is equivalent to:
-export const useUserStore = defineStore("user", () => {
-  let token = $ref("");
-  function login() {
-    token = "TOKEN";
-  }
-
-  return {
-    token: $$(token),
-    login: $$(login),
-  };
-});
-```
 
 ### Volar
 

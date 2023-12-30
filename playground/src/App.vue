@@ -10,6 +10,8 @@ export default () => (
       {value}
       {onInput}
     />
+
+    {value}
   </>
 )
 </script>

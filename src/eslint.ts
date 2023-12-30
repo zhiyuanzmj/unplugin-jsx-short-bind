@@ -1,3 +1,4 @@
+import { version } from '../package.json'
 import { transformJsxShortBind } from './core/transform'
 
 let offsets: {
@@ -6,6 +7,10 @@ let offsets: {
 }[] = []
 
 const processor = {
+  meta: {
+    name: 'jsx-short-bind',
+    version,
+  },
   preprocess(text: string) {
     const { s: transformedText, nodes } = transformJsxShortBind(text)
     offsets = nodes.reduce((result, node) => {

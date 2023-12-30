@@ -1,8 +1,8 @@
 {
   "name": "playground-vue3",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -25,7 +25,7 @@
     "type-fest": "^4.9.0",
     "typescript": "~5.3.3",
     "unocss": "^0.58.2",
-    "vite": "^5.0.10",
+    "vite": "^5.0.0",
     "vite-plugin-inspect": "^0.8.1",
     "vue-tsc": "1.8.27"
   }
