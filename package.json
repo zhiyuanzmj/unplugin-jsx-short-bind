@@ -1,0 +1,111 @@
+{
+  "name": "unplugin-jsx-short-bind",
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@8.12.0",
+  "description": "JSX short bind.",
+  "keywords": [
+    "unplugin",
+    "rollup",
+    "vite",
+    "esbuild",
+    "webpack"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/zhiyuanzmj/unplugin-jsx-short-bind#readme",
+  "bugs": {
+    "url": "https://github.com/zhiyuanzmj/unplugin-jsx-short-bind/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhiyuanzmj/unplugin-jsx-short-bind.git"
+  },
+  "author": "zhiyuanzmj",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./vite": {
+      "require": "./dist/vite.cjs",
+      "import": "./dist/vite.js"
+    },
+    "./webpack": {
+      "require": "./dist/webpack.cjs",
+      "import": "./dist/webpack.js"
+    },
+    "./rollup": {
+      "require": "./dist/rollup.cjs",
+      "import": "./dist/rollup.js"
+    },
+    "./esbuild": {
+      "require": "./dist/esbuild.cjs",
+      "import": "./dist/esbuild.js"
+    },
+    "./volar": {
+      "require": "./dist/volar.cjs",
+      "import": "./dist/volar.js"
+    },
+    "./eslint": {
+      "require": "./dist/eslint.cjs",
+      "import": "./dist/eslint.js"
+    },
+    "./*": "./*"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsup --watch src",
+    "build": "tsup",
+    "lint": "eslint --cache .",
+    "lint:fix": "pnpm run lint --fix",
+    "test": "vitest",
+    "play": "pnpm run -C ./playground dev",
+    "release": "bumpp && pnpm publish",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "@ast-grep/napi": "^0.16.0",
+    "@vue-macros/common": "^1.10.0",
+    "@vue/language-core": "^1.8.27",
+    "unplugin": "^1.6.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.6.1",
+    "@babel/types": "^7.23.6",
+    "@types/node": "^20.10.6",
+    "@vue-macros/test-utils": "^1.3.0",
+    "@vue-macros/volar": "^0.18.8",
+    "bumpp": "^9.2.1",
+    "change-case": "^5.3.0",
+    "eslint": "^8.56.0",
+    "eslint-define-config": "^2.1.0",
+    "fast-glob": "^3.3.2",
+    "prettier": "^3.1.1",
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "unplugin-vue-macros": "^2.7.7",
+    "vite": "^5.0.10",
+    "vitest": "^1.1.0",
+    "vue": "^3.4.3"
+  },
+  "engines": {
+    "node": ">=16.14.0"
+  }
+}
