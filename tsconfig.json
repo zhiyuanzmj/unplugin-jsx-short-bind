@@ -8,6 +8,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "types": ["node", "unplugin-vue-macros/macros-global"],
+    "allowJs": true,
     "strict": true,
     "noUnusedLocals": true,
     "esModuleInterop": true,

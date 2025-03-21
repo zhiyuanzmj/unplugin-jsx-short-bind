@@ -1,35 +1,22 @@
-import {
-  FileKind,
-  type VueLanguagePlugin,
-  replaceSourceRange,
-} from '@vue/language-core'
+import { createPlugin, replaceSourceRange } from 'ts-macro'
 import { transformJsxShortBind } from './core/transform'
 
-const plugin: VueLanguagePlugin = () => {
+const plugin = createPlugin(() => {
   return {
-    name: 'jsx-short-bind',
-    version: 1,
-    resolveEmbeddedFile(fileName, sfc, embeddedFile) {
-      if (embeddedFile.kind !== FileKind.TypeScriptHostFile)
-        return
-
-      for (const source of ['script', 'scriptSetup'] as const) {
-        if (!sfc[source]?.content)
-          continue
-
-        const { nodes } = transformJsxShortBind(sfc[source]!.content)
-        for (const node of nodes) {
-          replaceSourceRange(
-            embeddedFile.content,
-            source,
-            node.range().start.index - 1,
-            node.range().start.index - 1,
-              `${node.text()}=`,
-          )
-        }
+    name: 'volar-pugin-jsx-short-bind',
+    resolveVirtualCode({ ast, codes, source }) {
+      const { nodes } = transformJsxShortBind(ast.text)
+      for (const node of nodes) {
+        replaceSourceRange(
+          codes,
+          source,
+          node.range().start.index - 1,
+          node.range().start.index - 1,
+          `${node.text()}=`,
+        )
       }
     },
   }
-}
+})
 
 export default plugin
