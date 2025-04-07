@@ -7,18 +7,12 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "types": ["node", "unplugin-vue-macros/macros-global"],
+    "types": ["node"],
     "allowJs": true,
     "strict": true,
     "noUnusedLocals": true,
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "include": ["src", "tests"],
-  "vueCompilerOptions": {
-    "plugins": [
-      "@vue-macros/volar/export-render",
-      "./dist/volar.cjs"
-    ]
-  }
+  "include": ["src", "tests"]
 }

@@ -1,5 +1,6 @@
+import type { BaseOptions } from '@vue-macros/common'
 import {
-  type BaseOptions,
+
   REGEX_NODE_MODULES,
   REGEX_SUPPORTED_EXT,
 } from '@vue-macros/common'

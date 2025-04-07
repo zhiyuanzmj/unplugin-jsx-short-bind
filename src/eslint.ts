@@ -36,7 +36,7 @@ const processor = {
           : 'findLast'](node => fix.range[1] >= node.end) || {}
 
         if (ruleId === 'style/jsx-max-props-per-line' && offset) {
-          fix.text = `${fix.text.replace(/(\S+)=(?={\1})/g, '')}`
+          fix.text = `${fix.text.replace(/(\S+)=(?=\{\1\})/g, '')}`
           fix.range[1] -= offset
           continue
         }

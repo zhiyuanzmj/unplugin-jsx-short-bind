@@ -1,30 +1,19 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`fixtures > tests/fixtures/basic.vue 1`] = `
-"import { defineComponent } from 'vue';
-import _export_sfc from '[NULL]/plugin-vue/export-helper';
+exports[`fixtures > tests/fixtures/basic.tsx 1`] = `
+"// basic.js
+import { createVNode, Fragment } from 'vue';
 
-"use strict";
-var _sfc_main = /* @__PURE__ */ defineComponent({
-  __name: "basic",
-  setup(__props) {
-    let value = $ref("foo");
-    function onInput(e) {
-      value = e.target?.value;
-    }
-    defineRender(() => /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(
-      "input",
-      {
-        value,
-        onInput
-      }
-    )));
-    return () => {
-    };
+var basic = () => {
+  let value = $ref('foo');
+  function onInput(e) {
+    value = e.target?.value;
   }
-});
-
-var basic = /* @__PURE__ */ _export_sfc(_sfc_main, [__FILE__]);
+  return createVNode(Fragment, null, [createVNode("input", {
+    "value": value,
+    "onInput": onInput
+  }, null)]);
+};
 
 export { basic as default };
 "

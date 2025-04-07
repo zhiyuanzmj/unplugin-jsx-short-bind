@@ -4,20 +4,19 @@
 
 A shorthand for binding prop with the same data name for JSX. Powered by [ast-grep](https://github.com/ast-grep/ast-grep).
 
-```vue
-<script setup lang="tsx">
-let value = $ref('foo')
-function onInput(e: any) {
-  value = e.target.value
+```tsx
+export default () => {
+  const [value, setValue] = useState()
+  const onInput = (e) => {
+    setValue(e.currentTarget.value)
+  }
+  return (
+    <input
+      {value}
+      {onInput}
+    />
+  )
 }
-
-export default () => (
-  <input
-    {value}
-    {onInput}
-  />
-)
-</script>
 ```
 
 ## Installation
@@ -95,6 +94,18 @@ module.exports = {
 
 <br></details>
 
+## Typescript
+
+### [TS Macro](https://github.com/ts-macro/ts-macro)
+
+```ts {5}
+// tsm.config.ts
+import jsxShortBind from "unplugin-jsx-short-bind/volar";
+export default {
+  plugins: [jsxShortBind()],
+};
+```
+
 ### Volar
 
 ```jsonc {5}
@@ -102,12 +113,12 @@ module.exports = {
 {
   // ...
   "vueCompilerOptions": {
-    "plugins": ["unplugin-jsx-short-bind/volar"]
-  }
+    "plugins": ["unplugin-jsx-short-bind/volar"],
+  },
 }
 ```
 
-### Eslint
+## Eslint
 
 ```js {5}
 // eslint.config.js

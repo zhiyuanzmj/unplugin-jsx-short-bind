@@ -88,14 +88,13 @@
     "@vue-macros/common": "3.0.0-beta.7",
     "lodash": "^4.17.21",
     "ts-macro": "^0.1.25",
-    "unplugin": "^2.2.1"
+    "unplugin": "^2.2.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.10.2",
     "@babel/types": "^7.26.10",
     "@types/node": "^22.13.10",
     "@vue-macros/test-utils": "3.0.0-beta.7",
-    "@vue-macros/volar": "3.0.0-beta.7",
     "bumpp": "^10.1.0",
     "change-case": "^5.4.4",
     "eslint": "^9.22.0",
@@ -105,7 +104,6 @@
     "tsup": "^8.4.0",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
-    "unplugin-vue-macros": "^2.14.5",
     "vite": "^6.2.2",
     "vitest": "^3.0.9",
     "vue": "^3.5.13"

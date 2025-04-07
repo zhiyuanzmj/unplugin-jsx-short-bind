@@ -1,9 +1,10 @@
-import { createUnplugin } from 'unplugin'
+import type { Options } from './core/options'
 import {
   createFilter,
   generateTransform,
 } from '@vue-macros/common'
-import { type Options, resolveOption } from './core/options'
+import { createUnplugin } from 'unplugin'
+import { resolveOption } from './core/options'
 import { transformJsxShortBind } from './core/transform'
 
 export default createUnplugin<Options | undefined, false>((rawOptions = {}) => {

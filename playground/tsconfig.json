@@ -9,7 +9,7 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "types": ["unplugin-vue-macros/macros-global"],
+    "types": ["vue-macros/macros-global"],
     "allowJs": true,
     "strict": true,
     "noEmit": true,
