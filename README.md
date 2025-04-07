@@ -4,7 +4,6 @@
 
 A shorthand for binding prop with the same data name for JSX. Powered by [ast-grep](https://github.com/ast-grep/ast-grep).
 
-
 ```tsx
 export default () => {
   const [value, setValue] = useState()
@@ -26,7 +25,7 @@ export default () => {
 npm i -D unplugin-jsx-short-bind
 ```
 > Note: While registering the plugin in your config files, always have the plugin before the framework's main plugin. Otherwise, you'll get parse errors; For example:
-```ts 
+```ts
 // vite.config.js
 import { react } from '@vite/plugin-react';
 import JsxShortBind from "unplugin-jsx-short-bind/vite";
