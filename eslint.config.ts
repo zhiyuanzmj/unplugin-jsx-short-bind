@@ -5,14 +5,10 @@ import jsxShortBind from 'unplugin-jsx-short-bind/eslint'
 export default antfu(
   {
     rules: {
-      'vue/no-export-in-script-setup': 'off',
       'jsonc/comma-dangle': 'off',
-    },
-    overrides: {
-      markdown: {
-        'style/semi': 'off',
-        'style/quotes': 'off',
-      },
+      'style/jsx-sort-props': 'error',
+      'style/semi': 'off',
+      'style/quotes': 'off',
     },
   },
   jsxShortBind,

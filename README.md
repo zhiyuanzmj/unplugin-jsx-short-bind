@@ -12,8 +12,8 @@ export default () => {
   }
   return (
     <input
-      {value}
       {onInput}
+      {value}
     />
   )
 }

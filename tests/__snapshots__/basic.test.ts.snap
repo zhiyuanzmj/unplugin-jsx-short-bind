@@ -10,8 +10,8 @@ var basic = () => {
     value = e.target?.value;
   }
   return createVNode(Fragment, null, [createVNode("input", {
-    "value": value,
-    "onInput": onInput
+    "onInput": onInput,
+    "value": value
   }, null)]);
 };
 

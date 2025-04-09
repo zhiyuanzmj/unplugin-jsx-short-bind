@@ -8,8 +8,8 @@ export default defineComponent(() => {
   return () => (
     <>
       <input
-        {value}
         {onInput}
+        {value}
       />
 
       {value}
