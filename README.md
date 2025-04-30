@@ -26,8 +26,8 @@ npm i -D unplugin-jsx-short-bind
 ```
 > Note: While registering the plugin in your config files, always have the plugin before the framework's main plugin. Otherwise, you'll get parse errors; For example:
 ```ts
-// vite.config.js
-import { react } from '@vite/plugin-react';
+// vite.config.ts
+import react from '@vitejs/plugin-react';
 import JsxShortBind from "unplugin-jsx-short-bind/vite";
 
 export default defineConfig({
